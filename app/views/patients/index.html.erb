@@ -1,0 +1,34 @@
+<h1>Patients</h1>
+
+<% if current_user.receptionist? %>
+  <%= link_to 'New Patient', new_patient_path %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Contact</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.name %></td>
+        <td><%= patient.age %></td>
+        <td><%= patient.gender %></td>
+        <td><%= patient.contact %></td>
+        <td>
+          <%= link_to 'View', patient %>
+          <% if current_user.receptionist? %>
+            <%= link_to 'Edit', edit_patient_path(patient) %>
+            <%= link_to 'Delete', patient, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,24 +1,11 @@
-# README
+# PATIENT RTALPO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This is the repository for a patient portal built by Ruby on Rails.
+Kindly go through the config folder for better understandings.
 
-* Ruby version
+THis is a simple rails application that consists of a receptionist portal & doctor portal which performs the following tasks,
+A single login page for both portals.
+Receptionists can register a new patient & perform CRUD operations.
+Doctors can view registered patients & view the graph that represents the number of patients registered vs days.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
